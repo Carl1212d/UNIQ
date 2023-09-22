@@ -1,0 +1,347 @@
+body {
+    background-color: #2a2a2a;
+    /*background-image:  url('tile.png'), url('background-flat.png');
+    background-position: center, center top;
+    background-repeat: repeat, no-repeat;*/
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/84676/Background-inverted.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+     
+  }
+  
+  audio {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+  }
+  
+  @font-face
+  {
+    font-family: OSB;
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/84676/OpenSans-CondBold.ttf');
+  }
+  
+  @font-face
+  {
+    font-family: OSL;
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/84676/OpenSans-CondLight.ttf');
+  }
+  
+  .type {
+    opacity: .40;
+    position: absolute;
+    width: 100%;
+  
+     
+  }
+  
+  .type h2 {
+    font-family: OSL;
+    text-align: center;
+    text-shadow: 0 0 2px rgba(0,0,0,0.8);
+    font-size: 24px;
+  
+  }
+  
+  .type h1 {
+     font-family: OSB;
+    /*width: 100%;*/
+    text-align: center;
+    /*color: transparent;*/
+    text-shadow: 0 0 2px rgba(0,0,0,0.8);
+    font-weight: bold;
+    font-size: 72px;
+  
+  }
+  
+  .headline1 {
+    font-family: OSB!important;
+    font-size: 18px!important;
+    margin-left: -490px;
+    margin-top: 190px;
+    text-shadow: 0 0 1px rgba(0,0,0,0.8)!important;
+  }
+  
+  .headline2 {
+    font-family: OSB!important;
+    font-size: 18px!important;
+    margin-left: 465px;
+    margin-top: 190px;
+    text-shadow: 0 0 1px rgba(0,0,0,0.8)!important;
+  }
+  
+  .lfda {
+    margin-left: -20px;
+    margin-top: 320px;
+  }
+  
+  .aside {
+    font-size: 30px!important;
+    margin-left: -20px;
+    margin-top: 415px;
+  }
+  
+  .date {
+    font-size: 30px!important;
+    margin-left: -20px;
+    margin-top: 475px;
+  }
+  .itunes {
+    font-size: 30px!important;
+    margin-left: -20px;
+    margin-top: 535px;
+  }
+  
+  .audio {
+      cursor: pointer;
+      position: absolute;
+      width:250px;
+      height:250px;
+      top:70px;
+      left:50%;
+      margin-left: -125px;
+      z-index:30;
+  }
+  
+  .container {
+      position: absolute;
+      width:250px;
+      height:250px;
+      top:70px;
+      left:50%;
+      margin-left: -125px;
+      
+  }
+  
+  .container .layer1, .layer1 div {
+      position: absolute;
+      background:rgba(255,0,0,.1);
+  }
+  
+  .container .layer2, .layer2 div  {
+      position: absolute;
+      background:rgba(160, 173, 255, .1);
+  }
+  
+  /* --------- Animation --------- */
+  .container .layer1, .layer1 div {
+      
+      /*----Firefox----*/
+      -moz-animation-name: spin-clockwise;
+      -moz-animation-duration: 14s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-timing-function: cubic-bezier(.52,.7,.52,.33);
+       box-shadow:inset 0 0 10px rgba(0,0,0,0.1);
+      
+      /*----Safari/Chrome----*/
+      -webkit-animation-name: spin-clockwise;
+      -webkit-animation-duration: 14s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: cubic-bezier(.52,.7,.52,.33);
+      -webkit-box-shadow:inset 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .container .layer2, .layer2 div {
+      /*----Firefox----*/
+      -moz-animation-name: spin-counter-clockwise;
+      -moz-animation-duration: 14s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-timing-function: cubic-bezier(.52,.7,.52,.33);
+       box-shadow:inset 0 0 10px rgba(0,0,0,0.1);
+      
+      /*----Safari/Chrome----*/
+      -webkit-animation-name: spin-counter-clockwise;
+      -webkit-animation-duration: 14s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: cubic-bezier(.52,.7,.52,.33);
+      -webkit-box-shadow:inset 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  
+  /*---Firefox--Animation: Clockwise */
+  @-moz-keyframes spin-clockwise {
+      0%  {-moz-transform: rotate(0deg);} 
+  
+      100%  {-moz-transform: rotate(360deg);} 
+  }
+  
+  /*--Firefox--Animation: Counter counter clockwise */
+  @-moz-keyframes spin-counter-clockwise {
+      0%  { -moz-transform: rotate(0deg);} 
+  
+      100%  { -moz-transform: rotate(-360deg);} 
+  }
+  
+  /*---Safari/Chrome--Animation: Clockwise */
+  @-webkit-keyframes spin-clockwise {
+      0%  {-webkit-transform: rotate(0deg);} 
+  
+      100%  {-webkit-transform: rotate(360deg);} 
+  }
+  
+  /*--Safari/Chrome--Animation: Counter counter clockwise */
+  @-webkit-keyframes spin-counter-clockwise {
+      0%  { -webkit-transform: rotate(0deg);} 
+  
+      100%  { -webkit-transform: rotate(-360deg);} 
+  }
+  .petal1 {
+    width:100px;
+    height:100px;
+  background-color:rgb(241, 228, 44);
+    border-radius: 0 100px;
+    position: absolute;
+  transform: rotate(0deg);
+  transform-origin: right bottom;
+}
+
+.petal2 {
+  width:100px;
+  height:100px;
+  background-color:orange;
+  border-radius: 0 100px;
+  position: absolute;
+  transform: rotate(30deg);
+  transform-origin: right bottom;
+}
+
+.petal3 {
+  width:100px;
+  height:100px;
+  background-color:rgb(233, 233, 41);
+  border-radius: 0 100px;
+  position: absolute;
+  transform: rotate(60deg);
+  transform-origin: right bottom;
+}
+
+.petal4 {
+  width:100px;
+  height:100px;
+  background-color:rgb(238, 226, 60);
+  border-radius: 0 100px;
+  position: absolute;
+  transform: rotate(90deg);
+  transform-origin: right bottom;
+}
+
+.petal5 {
+  width:100px;
+  height:100px;
+  background-color:orange;
+  border-radius: 0 100px;
+  position: absolute;
+  transform: rotate(120deg);
+  transform-origin: right bottom;
+}
+
+.petal6 {
+  width:100px;
+  height:100px;
+  background-color:rgb(238, 224, 26);
+  border-radius: 0 100px;
+  position: absolute;
+  transform: rotate(150deg);
+  transform-origin: right bottom;
+}
+
+.petal7 {
+  width:100px;
+  height:100px;
+  background-color:rgb(221, 172, 13);
+  border-radius: 0 100px;
+  position: absolute;
+  transform: rotate(180deg);
+  transform-origin: right bottom;
+}
+
+.petal8 {
+  width:100px;
+  height:100px;
+  background-color:orange;
+  border-radius: 0 100px;
+  position: absolute;
+  transform: rotate(210deg);
+  transform-origin: right bottom;
+}
+
+.petal9 {
+  width:100px;
+  height:100px;
+  background-color:rgb(240, 218, 23);
+  border-radius: 0 100px;
+  position: absolute;
+  transform: rotate(240deg);
+  transform-origin: right bottom;
+}
+
+.petal10 {
+  width:100px;
+  height:100px;
+  background-color:rgb(223, 209, 22);
+  border-radius: 0 100px;
+  position: absolute;
+  transform: rotate(270deg);
+  transform-origin: right bottom;
+}
+
+.petal11 {
+  width:100px;
+  height:100px;
+  background-color:orange;
+  border-radius: 0 100px;
+  position: absolute;
+  transform: rotate(300deg);
+  transform-origin: right bottom;
+}
+
+.petal12 {
+  width:100px;
+  height:100px;
+  background-color:rgb(235, 215, 38);
+  border-radius: 0 100px;
+  position: absolute;
+  transform: rotate(330deg);
+  transform-origin: right bottom;
+}
+.cor {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(173, 140, 31);
+  border-radius: 50%;
+  position: absolute;
+  left: 75px;
+  top: 75px;
+}
+
+.flor {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 100px;
+  left: 550px;
+            transform: rotate(0deg);
+            animation: molinetdevent 4s infinite reverse linear, 	                            intermitent 2s infinite alternate linear;
+            animation-delay: 5s; 
+            transform-origin:100px 100px;
+}
+
+
+/* ------------ Animació ------------- */
+@keyframes molinetdevent {
+from {
+transform:rotate(0deg);
+}
+to {
+transform:rotate(360deg);
+}
+}
+
+@keyframes intermitent {
+from {
+opacity: 0;
+}
+to {
+opacity:1;
+}
+}
